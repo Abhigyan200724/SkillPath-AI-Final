@@ -70,7 +70,7 @@ const LoginPage = () => {
                 value={form.password} onChange={e => setForm({ ...form, password: e.target.value })}
                 placeholder="Your password" autoComplete="current-password"
                 className={`input-field ${errors.password ? 'input-field--error' : ''}`}
-                style={{ paddingRight: 44 }}
+                style={{ paddingRight: 44, width: '420px' }}
               />
               <button type="button" onClick={() => setShowPass(!showPass)}
                 style={{ position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer', fontSize: '1.1rem' }}>

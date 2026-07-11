@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import { FiMap, FiMessageSquare, FiFolder, FiBookOpen, FiArrowRight, FiRefreshCw } from 'react-icons/fi'
-import { useAuth } from '../context/AuthContext'
-import DashboardLayout from '../components/layout/DashboardLayout'
-import ProgressRing from '../components/ui/ProgressRing'
-import Spinner from '../components/ui/Spinner'
-import useRoadmap from '../hooks/useRoadmap'
-import { formatDate } from '../utils/helpers'
+import { useAuth } from '../context/AuthContext.jsx'
+import DashboardLayout from '../components/layout/DashboardLayout.jsx'
+import ProgressRing from '../components/ui/ProgressRing.jsx'
+import Spinner from '../components/ui/Spinner.jsx'
+import useRoadmap from '../hooks/useRoadmap.js'
+import { formatDate } from '../utils/helpers.js'
 
 const StatCard = ({ icon, label, value, color = 'var(--color-primary)' }) => (
   <div className="stat-card">
