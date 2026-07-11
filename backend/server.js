@@ -34,7 +34,7 @@ const app = express();
 app.use(helmet());
 const clientUrl = process.env.CLIENT_URL;
 const allowedOrigins = [
-  'https://skill-path-ai-final-xi.vercel.app/',
+  'https://skill-path-ai-final-xi.vercel.app',
   clientUrl,
   clientUrl ? clientUrl.replace(/\/$/, '') : null
 ].filter(Boolean);
@@ -77,13 +77,9 @@ app.get('/api/health', (req, res) => res.json(
     ));
 
 // Serve frontend in production (optional for monolithic deployments)
-if (process.env.NODE_ENV === 'production') {
-  const __dirname = path.resolve();
-  app.use(express.static(path.join(__dirname, '../skillpath-frontend/dist')));
-  app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, '../skillpath-frontend/dist', 'index.html')));
-} else {
-  app.get('/', (req, res) => res.send('API is running....'));
-}
+app.get("/", (req, res) => {
+  res.send("SkillPath AI Backend is Running...");
+});
 
 // Error Handling Middleware
 app.use(notFound);
