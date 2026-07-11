@@ -34,7 +34,7 @@ const app = express();
 app.use(helmet());
 const clientUrl = process.env.CLIENT_URL;
 const allowedOrigins = [
-  'http://localhost:5173',
+  'https://skill-path-ai-final-xi.vercel.app/',
   clientUrl,
   clientUrl ? clientUrl.replace(/\/$/, '') : null
 ].filter(Boolean);
